@@ -196,6 +196,20 @@ main() {
   # shellcheck disable=SC2064
   trap "cleanupMountPoint ${escapeMountPoint}" EXIT
 
+drvs=$(nix-instantiate "${libexec_dir}"/install-cli.nix \
+    "${nix_args[@]}" \
+    --impure \
+    --argstr flake "$flake" \
+    --argstr flakeAttr "$flakeAttr" \
+    --argstr rootMountPoint "$mountPoint" \
+    --arg writeEfiBootEntries "$writeEfiBootEntries" \
+    --arg diskMappings "$(serialiaseArrayToNix diskMappings)" \
+    --argstr extraSystemConfig "$extraSystemConfig" \
+    -A installToplevel \
+    -A closureInfo \
+    -A "$diskoAttr")
+exit 0
+
   outputs=$(nixBuild "${libexec_dir}"/install-cli.nix \
     "${nix_args[@]}" \
     --no-out-link \
