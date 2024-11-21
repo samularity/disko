@@ -249,6 +249,14 @@ in
           fs = partMounts.fs or { };
         };
     };
+    _unmount = diskoLib.mkUnmountOption {
+      inherit config options;
+      default = ''
+        ${lib.concatStrings (map (partition: ''
+          ${lib.optionalString (partition.content != null) partition.content._unmount}
+        '') sortedPartitions)}
+      '';
+    };
     _config = lib.mkOption {
       internal = true;
       readOnly = true;
