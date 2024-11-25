@@ -1,11 +1,12 @@
 {
-    "disks": {
+    "disk": {
         "MODEL:ST2000LM003 HN-M201RAD,SN:S321J9GFC01497": {
             "device": "sda",
             "type": "disk",
             "content": {
                 "partitions": {
                     "PARTUUID:c090741b-68e2-4867-96df-2ec00765f2c0": {
+                        "_index": 1,
                         "size": "128M",
                         "content": {
                             "type": "filesystem",
@@ -14,6 +15,7 @@
                         }
                     },
                     "UUID:7CA41E5EA41E1B6A": {
+                        "_index": 2,
                         "size": "1.8T",
                         "content": {
                             "type": "filesystem",
@@ -30,6 +32,7 @@
             "content": {
                 "partitions": {
                     "UUID:01D60069CEED69C0": {
+                        "_index": 1,
                         "size": "499.5M",
                         "content": {
                             "type": "filesystem",
@@ -38,6 +41,7 @@
                         }
                     },
                     "UUID:01D6006B90875FE0": {
+                        "_index": 2,
                         "size": "236.8G",
                         "content": {
                             "type": "filesystem",
@@ -46,6 +50,7 @@
                         }
                     },
                     "UUID:708B-C192": {
+                        "_index": 3,
                         "size": "100M",
                         "content": {
                             "type": "filesystem",
@@ -55,6 +60,7 @@
                         "type": "EF00"
                     },
                     "UUID:90B6FB81B6FB65DE": {
+                        "_index": 4,
                         "size": "544M",
                         "content": {
                             "type": "filesystem",
@@ -71,6 +77,7 @@
             "content": {
                 "partitions": {
                     "UUID:2740-1628": {
+                        "_index": 1,
                         "size": "1000M",
                         "content": {
                             "type": "filesystem",
@@ -80,6 +87,7 @@
                         "type": "EF00"
                     },
                     "UUID:ca548f68-4e51-4364-b366-690ecc27590f": {
+                        "_index": 2,
                         "size": "588.4G",
                         "content": {
                             "type": "filesystem",
@@ -88,6 +96,7 @@
                         }
                     },
                     "UUID:879299db-4147-4fac-9f34-5e8e92073efc": {
+                        "_index": 3,
                         "size": "588.4G",
                         "content": {
                             "type": "filesystem",
@@ -96,6 +105,7 @@
                         }
                     },
                     "UUID:9A48E8C248E89E6F": {
+                        "_index": 4,
                         "size": "685.2G",
                         "content": {
                             "type": "filesystem",
